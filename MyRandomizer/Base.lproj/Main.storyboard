@@ -113,10 +113,10 @@
             </objects>
             <point key="canvasLocation" x="838" y="-28"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="kMd-8d-J8d">
             <objects>
-                <viewController id="HKu-qB-s2b" sceneMemberID="viewController">
+                <viewController id="HKu-qB-s2b" customClass="SettingsViewController" customModule="MyRandomizer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ars-Z8-92D">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -152,6 +152,9 @@
                                         <state key="normal" title="Cancel">
                                             <color key="titleColor" red="1" green="0.0" blue="0.01666666667" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="cancelButtonTapped" destination="HKu-qB-s2b" eventType="touchUpInside" id="UMe-SM-dFi"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -166,6 +169,10 @@
                             <constraint firstItem="UWy-8g-d1z" firstAttribute="leading" secondItem="Njk-OR-8fT" secondAttribute="leading" constant="70" id="gFH-q7-sby"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="maxValueTF" destination="364-bL-eIg" id="OZK-LD-h9v"/>
+                        <outlet property="minValueTF" destination="bTl-co-pCH" id="GCv-H7-LS5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9kO-qm-zg4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
