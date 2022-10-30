@@ -19,6 +19,13 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         getResultButton.layer.cornerRadius = 10
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let settingsVC = segue.destination as? SettingsViewController else { return }
+        settingsVC.minValue = minValueLabel.text
+        settingsVC.maxValue = maxValueLabel.text
+        
+    }
 
     @IBAction func getResultButtonTapped() {
         let minimumNumber = Int(minValueLabel.text ?? "") ?? 0
