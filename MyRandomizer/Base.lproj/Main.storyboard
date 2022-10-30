@@ -59,6 +59,9 @@
                                 <state key="normal" title="Get Result">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="getResultButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="06y-CE-cva"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -74,6 +77,12 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ruo-UP-eyP" secondAttribute="trailing" constant="60" id="vBZ-q5-PZ2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="getResultButton" destination="ruo-UP-eyP" id="VHb-LZ-ucm"/>
+                        <outlet property="maxValueLabel" destination="qkf-Wq-IDP" id="yKq-xB-MFP"/>
+                        <outlet property="minValueLabel" destination="yUE-CQ-Xq5" id="IDK-EN-P8r"/>
+                        <outlet property="randomNumberLabel" destination="F4w-YK-Ub9" id="EIi-A1-2Qo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
