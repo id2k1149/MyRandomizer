@@ -8,6 +8,24 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Cpf-gY-bgm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="u48-VH-Rim" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="jBf-FF-FaA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="IUZ-H2-h2l"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WvU-Z0-fhN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="96.799999999999997" y="-28.335832083958024"/>
+        </scene>
         <!--Random Number-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -78,7 +96,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Random Number" id="vAu-Qj-Of8">
-                        <barButtonItem key="rightBarButtonItem" title="Settings" id="Ru3-XW-eka"/>
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="Ru3-XW-eka">
+                            <connections>
+                                <segue destination="HKu-qB-s2b" kind="presentation" id="dhy-iE-Rez"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="getResultButton" destination="ruo-UP-eyP" id="VHb-LZ-ucm"/>
@@ -89,25 +111,65 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1036" y="-28.335832083958024"/>
+            <point key="canvasLocation" x="838" y="-28"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Cpf-gY-bgm">
+        <!--View Controller-->
+        <scene sceneID="kMd-8d-J8d">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="u48-VH-Rim" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="jBf-FF-FaA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="IUZ-H2-h2l"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WvU-Z0-fhN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="HKu-qB-s2b" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ars-Z8-92D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="UWy-8g-d1z">
+                                <rect key="frame" x="70" y="70" width="235" height="99"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="minimum value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bTl-co-pCH">
+                                        <rect key="frame" x="0.0" y="0.0" width="235" height="39.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="maximum value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="364-bL-eIg">
+                                        <rect key="frame" x="0.0" y="59.5" width="235" height="39.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="UUI-dI-kH4">
+                                <rect key="frame" x="142" y="265" width="91" height="117"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxt-J6-3N4">
+                                        <rect key="frame" x="0.0" y="0.0" width="91" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Save"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTA-Wl-yy5">
+                                        <rect key="frame" x="0.0" y="69" width="91" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" red="1" green="0.0" blue="0.01666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Njk-OR-8fT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UUI-dI-kH4" firstAttribute="centerY" secondItem="Ars-Z8-92D" secondAttribute="centerY" id="H3N-Pq-sbB"/>
+                            <constraint firstItem="Njk-OR-8fT" firstAttribute="trailing" secondItem="UWy-8g-d1z" secondAttribute="trailing" constant="70" id="KUI-xh-y2p"/>
+                            <constraint firstItem="UWy-8g-d1z" firstAttribute="top" secondItem="Njk-OR-8fT" secondAttribute="top" constant="70" id="RBl-2F-Vam"/>
+                            <constraint firstItem="UUI-dI-kH4" firstAttribute="centerX" secondItem="Ars-Z8-92D" secondAttribute="centerX" id="al1-0k-Dg2"/>
+                            <constraint firstItem="UWy-8g-d1z" firstAttribute="leading" secondItem="Njk-OR-8fT" secondAttribute="leading" constant="70" id="gFH-q7-sby"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9kO-qm-zg4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="96.799999999999997" y="-28.335832083958024"/>
+            <point key="canvasLocation" x="1580" y="-28"/>
         </scene>
     </scenes>
     <resources>
