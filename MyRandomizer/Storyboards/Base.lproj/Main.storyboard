@@ -136,50 +136,29 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="UUI-dI-kH4">
-                                <rect key="frame" x="142" y="265" width="91" height="117"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxt-J6-3N4">
-                                        <rect key="frame" x="0.0" y="0.0" width="91" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Save"/>
-                                        <connections>
-                                            <segue destination="pXy-5q-Xra" kind="unwind" unwindAction="unwindFor:" id="3s4-pw-kVu"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTA-Wl-yy5">
-                                        <rect key="frame" x="0.0" y="69" width="91" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Cancel">
-                                            <color key="titleColor" red="1" green="0.0" blue="0.01666666667" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="cancelButtonTapped" destination="HKu-qB-s2b" eventType="touchUpInside" id="UMe-SM-dFi"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Njk-OR-8fT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="UUI-dI-kH4" firstAttribute="centerY" secondItem="Ars-Z8-92D" secondAttribute="centerY" id="H3N-Pq-sbB"/>
                             <constraint firstItem="Njk-OR-8fT" firstAttribute="trailing" secondItem="UWy-8g-d1z" secondAttribute="trailing" constant="70" id="KUI-xh-y2p"/>
                             <constraint firstItem="UWy-8g-d1z" firstAttribute="top" secondItem="Njk-OR-8fT" secondAttribute="top" constant="70" id="RBl-2F-Vam"/>
-                            <constraint firstItem="UUI-dI-kH4" firstAttribute="centerX" secondItem="Ars-Z8-92D" secondAttribute="centerX" id="al1-0k-Dg2"/>
                             <constraint firstItem="UWy-8g-d1z" firstAttribute="leading" secondItem="Njk-OR-8fT" secondAttribute="leading" constant="70" id="gFH-q7-sby"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Raj-8m-uYa"/>
+                    <navigationItem key="navigationItem" id="Raj-8m-uYa">
+                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="cancel" id="dIS-ZV-Mjb">
+                            <connections>
+                                <action selector="cancelButtonTapped" destination="HKu-qB-s2b" id="uHV-aY-Dl6"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="yyp-hA-2S6"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="maxValueTF" destination="364-bL-eIg" id="OZK-LD-h9v"/>
                         <outlet property="minValueTF" destination="bTl-co-pCH" id="GCv-H7-LS5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9kO-qm-zg4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="pXy-5q-Xra" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2367" y="-28"/>
         </scene>
