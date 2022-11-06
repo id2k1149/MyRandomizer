@@ -30,6 +30,9 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func saveButtonPressed() {
+        // force end edit TF
+        view.endEditing(true)
+
         delegate.setNewValues(
             for: randomNumber)
         dismiss(animated: true)
