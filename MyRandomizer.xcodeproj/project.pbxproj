@@ -14,6 +14,7 @@
 		5022A002290DF27C0020C0C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5022A001290DF27C0020C0C0 /* Assets.xcassets */; };
 		5022A005290DF27C0020C0C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5022A003290DF27C0020C0C0 /* LaunchScreen.storyboard */; };
 		5022A00D290DFEB90020C0C0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5022A00C290DFEB90020C0C0 /* SettingsViewController.swift */; };
+		50A8DD512918147000EE5AFA /* RandomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A8DD502918147000EE5AFA /* RandomNumber.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5022A004290DF27C0020C0C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5022A006290DF27C0020C0C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5022A00C290DFEB90020C0C0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		50A8DD502918147000EE5AFA /* RandomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumber.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,49 @@
 		50229FF7290DF27A0020C0C0 /* MyRandomizer */ = {
 			isa = PBXGroup;
 			children = (
-				50229FF8290DF27A0020C0C0 /* AppDelegate.swift */,
-				50229FFA290DF27A0020C0C0 /* SceneDelegate.swift */,
-				50229FFC290DF27A0020C0C0 /* MainViewController.swift */,
-				5022A00C290DFEB90020C0C0 /* SettingsViewController.swift */,
-				50229FFE290DF27A0020C0C0 /* Main.storyboard */,
+				50A8DD4F2918144A00EE5AFA /* Models */,
+				50A8DD4E2918142100EE5AFA /* Delegates */,
+				50A8DD4D291813E300EE5AFA /* ViewControllers */,
+				50A8DD4C2918138500EE5AFA /* Storyboards */,
 				5022A001290DF27C0020C0C0 /* Assets.xcassets */,
-				5022A003290DF27C0020C0C0 /* LaunchScreen.storyboard */,
 				5022A006290DF27C0020C0C0 /* Info.plist */,
 			);
 			path = MyRandomizer;
+			sourceTree = "<group>";
+		};
+		50A8DD4C2918138500EE5AFA /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				50229FFE290DF27A0020C0C0 /* Main.storyboard */,
+				5022A003290DF27C0020C0C0 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		50A8DD4D291813E300EE5AFA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				50229FFC290DF27A0020C0C0 /* MainViewController.swift */,
+				5022A00C290DFEB90020C0C0 /* SettingsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		50A8DD4E2918142100EE5AFA /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				50229FF8290DF27A0020C0C0 /* AppDelegate.swift */,
+				50229FFA290DF27A0020C0C0 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		50A8DD4F2918144A00EE5AFA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				50A8DD502918147000EE5AFA /* RandomNumber.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +178,7 @@
 			files = (
 				50229FFD290DF27A0020C0C0 /* MainViewController.swift in Sources */,
 				50229FF9290DF27A0020C0C0 /* AppDelegate.swift in Sources */,
+				50A8DD512918147000EE5AFA /* RandomNumber.swift in Sources */,
 				50229FFB290DF27A0020C0C0 /* SceneDelegate.swift in Sources */,
 				5022A00D290DFEB90020C0C0 /* SettingsViewController.swift in Sources */,
 			);
