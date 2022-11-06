@@ -24,16 +24,14 @@ class MainViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let settingsVC = segue.destination as? SettingsViewController else { return }
+        guard let navigationVC = segue.destination as? UINavigationController else { return }
+        guard let settingsVC = navigationVC.topViewController as? SettingsViewController else { return }
         settingsVC.minValue = minValueLabel.text
         settingsVC.maxValue = maxValueLabel.text
     }
 
     @IBAction func getResultButtonTapped() {
-        let minimumNumber = Int(minValueLabel.text ?? "") ?? 0
-        let maximumNumber = Int(maxValueLabel.text ?? "") ?? 100
-        
-        randomNumberLabel.text = Int.random(in: minimumNumber...maximumNumber).formatted()
+        randomNumberLabel.text = randomNumber.getRandom.formatted()
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
