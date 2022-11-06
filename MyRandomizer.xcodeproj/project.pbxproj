@@ -14,6 +14,7 @@
 		5022A002290DF27C0020C0C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5022A001290DF27C0020C0C0 /* Assets.xcassets */; };
 		5022A005290DF27C0020C0C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5022A003290DF27C0020C0C0 /* LaunchScreen.storyboard */; };
 		5022A00D290DFEB90020C0C0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5022A00C290DFEB90020C0C0 /* SettingsViewController.swift */; };
+		50A8DD4B2918111200EE5AFA /* RandomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A8DD4A2918111200EE5AFA /* RandomNumber.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5022A004290DF27C0020C0C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5022A006290DF27C0020C0C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5022A00C290DFEB90020C0C0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		50A8DD4A2918111200EE5AFA /* RandomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumber.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		508AF14729180D83008F81BC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				50A8DD4A2918111200EE5AFA /* RandomNumber.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 			files = (
 				50229FFD290DF27A0020C0C0 /* MainViewController.swift in Sources */,
 				50229FF9290DF27A0020C0C0 /* AppDelegate.swift in Sources */,
+				50A8DD4B2918111200EE5AFA /* RandomNumber.swift in Sources */,
 				50229FFB290DF27A0020C0C0 /* SceneDelegate.swift in Sources */,
 				5022A00D290DFEB90020C0C0 /* SettingsViewController.swift in Sources */,
 			);
