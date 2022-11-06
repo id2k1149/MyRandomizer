@@ -43,6 +43,13 @@ class MainViewController: UIViewController {
         minValueLabel.text = settingsVC.minValueTF.text
         maxValueLabel.text = settingsVC.maxValueTF.text
     }
-    
+}
+
+// MARK: - SettingsViewControllerDelegate
+extension MainViewController: SettingsViewControllerDelegate {
+    func setNewValues(for minimumValue: String, and maximumValue: String) {
+        minValueLabel.text = minimumValue
+        maxValueLabel.text = maximumValue
+    }
 }
 
