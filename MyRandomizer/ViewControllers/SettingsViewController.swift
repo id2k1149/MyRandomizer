@@ -39,6 +39,16 @@ class SettingsViewController: UIViewController {
 // MARK: - UITextFieldDelegate
 extension SettingsViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
-        print(textField.text)
+        guard let newValue = textField.text else { return }
+        
+        // check newValue is Int
+        guard let numberValue = Int(newValue) else { return }
+        
+        if textField == minValueTF {
+            randomNumber.minimumValue = numberValue
+        } else {
+            randomNumber.maximumValue = numberValue
+        }
+
     }
 }
