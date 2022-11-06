@@ -151,7 +151,11 @@
                                 <action selector="cancelButtonTapped" destination="HKu-qB-s2b" id="uHV-aY-Dl6"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="yyp-hA-2S6"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="yyp-hA-2S6">
+                            <connections>
+                                <action selector="saveButtonPressed" destination="HKu-qB-s2b" id="JC0-bo-KcA"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="maxValueTF" destination="364-bL-eIg" id="OZK-LD-h9v"/>

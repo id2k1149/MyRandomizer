@@ -23,4 +23,8 @@ class SettingsViewController: UIViewController {
     @IBAction func cancelButtonTapped() {
         dismiss(animated: true)
     }
+    
+    @IBAction func saveButtonPressed() {
+        dismiss(animated: true)
+    }
 }
