@@ -30,7 +30,13 @@ class MainViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let navigationVC = segue.destination as? UINavigationController else { return }
         guard let settingsVC = navigationVC.topViewController as? SettingsViewController else { return }
+        
+        // initialize settingsVC.randomNumber
         settingsVC.randomNumber = randomNumber
+        
+        // before going to SettingsViewController
+        // need to initialize settingsVC.delegate
+        settingsVC.delegate = self
         
     }
 
