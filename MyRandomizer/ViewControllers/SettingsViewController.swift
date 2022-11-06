@@ -17,6 +17,10 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        minValueTF.delegate = self
+        maxValueTF.delegate = self
+        
         minValueTF.text = randomNumber.minimumValue.formatted()
         maxValueTF.text = randomNumber.maximumValue.formatted()
     }
@@ -27,8 +31,14 @@ class SettingsViewController: UIViewController {
     
     @IBAction func saveButtonPressed() {
         delegate.setNewValues(
-            for: minValueTF.text ?? "0",
-            and: maxValueTF.text ?? "100")
+            for: randomNumber)
         dismiss(animated: true)
+    }
+}
+
+// MARK: - UITextFieldDelegate
+extension SettingsViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        print(textField.text)
     }
 }

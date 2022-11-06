@@ -8,7 +8,7 @@
 import UIKit
 
 protocol SettingsViewControllerDelegate {
-    func setNewValues(for minimumValue: String, and maximumValue: String)
+    func setNewValues(for randomNumber: RandomNumber)
 }
 
 class MainViewController: UIViewController {
@@ -53,9 +53,10 @@ class MainViewController: UIViewController {
 
 // MARK: - SettingsViewControllerDelegate
 extension MainViewController: SettingsViewControllerDelegate {
-    func setNewValues(for minimumValue: String, and maximumValue: String) {
-        minValueLabel.text = minimumValue
-        maxValueLabel.text = maximumValue
+    func setNewValues(for randomNumber: RandomNumber) {
+        minValueLabel.text = randomNumber.minimumValue.formatted()
+        maxValueLabel.text = randomNumber.maximumValue.formatted()
+        self.randomNumber = randomNumber
     }
 }
 
