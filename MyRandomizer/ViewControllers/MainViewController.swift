@@ -12,12 +12,15 @@ class MainViewController: UIViewController {
     @IBOutlet var minValueLabel: UILabel!
     @IBOutlet var maxValueLabel: UILabel!
     @IBOutlet var randomNumberLabel: UILabel!
-    
     @IBOutlet var getResultButton: UIButton!
+    
+    private var randomNumber = RandomNumber(minimumValue: 0, maximumValue: 100)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         getResultButton.layer.cornerRadius = 10
+        minValueLabel.text = randomNumber.minimumValue.formatted()
+        maxValueLabel.text = randomNumber.maximumValue.formatted()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
