@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol SettingsViewControllerDelegate {
+    func setNewValues(for randomNumber: RandomNumber)
+}
+
 class MainViewController: UIViewController {
 
     @IBOutlet var minValueLabel: UILabel!
