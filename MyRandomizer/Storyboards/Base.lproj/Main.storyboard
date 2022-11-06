@@ -113,7 +113,7 @@
             </objects>
             <point key="canvasLocation" x="838" y="-28"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--Settings-->
         <scene sceneID="kMd-8d-J8d">
             <objects>
                 <viewController id="HKu-qB-s2b" customClass="SettingsViewController" customModule="MyRandomizer" customModuleProvider="target" sceneMemberID="viewController">
@@ -145,15 +145,15 @@
                             <constraint firstItem="UWy-8g-d1z" firstAttribute="leading" secondItem="Njk-OR-8fT" secondAttribute="leading" constant="70" id="gFH-q7-sby"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Raj-8m-uYa">
-                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="cancel" id="dIS-ZV-Mjb">
+                    <navigationItem key="navigationItem" title="Settings" id="Raj-8m-uYa">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="iuK-I5-Z8c">
                             <connections>
-                                <action selector="cancelButtonTapped" destination="HKu-qB-s2b" id="uHV-aY-Dl6"/>
+                                <action selector="cancelButtonTapped" destination="HKu-qB-s2b" id="7eG-QG-HqO"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="yyp-hA-2S6">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="mPY-Wl-70D">
                             <connections>
-                                <action selector="saveButtonPressed" destination="HKu-qB-s2b" id="JC0-bo-KcA"/>
+                                <action selector="saveButtonPressed" destination="HKu-qB-s2b" id="vYW-fT-j27"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
