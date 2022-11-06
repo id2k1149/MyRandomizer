@@ -8,7 +8,7 @@
 import UIKit
 
 protocol SettingsViewControllerDelegate {
-    func setNewValues(for randomNumber: RandomNumber)
+    func setNewValues(for minimumValue: String, and maximumValue: String)
 }
 
 class MainViewController: UIViewController {
